@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Ensino — Teste de Sistemas</title>
+<style>
+  :root{
+    --ink:#172033;
+    --paper:#ffffff;
+    --panel:#ffffff;
+    --rule:#d9e2ef;
+    --accent:#003DA5;
+    --accent-2:#FF6600;
+    --muted:#6b7280;
+    --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    padding:0 0 80px;
+  }
+  .top-strip{
+    background:var(--accent);
+    color:#ffffff;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.04em;
+    padding:8px 24px;
+    display:flex;
+    justify-content:space-between;
+  }
+  .top-strip span.ok{color:#ffffff;}
+  header.hero{
+    max-width:960px;
+    margin:0 auto;
+    padding:64px 24px 40px;
+    border-bottom:2px solid var(--accent);
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:var(--accent-2);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-size:44px;
+    line-height:1.08;
+    margin:0 0 8px;
+    font-weight:600;
+  }
+  .subtitle{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:20px;
+    color:var(--muted);
+    margin:0 0 28px;
+  }
+  .meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin-top:20px;
+  }
+  .meta-cell{
+    background:var(--panel);
+    padding:14px 16px;
+  }
+  .meta-cell .k{
+    font-family:var(--mono);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--accent-2);
+    display:block;
+    margin-bottom:4px;
+  }
+  .meta-cell .v{font-size:14.5px; font-weight:600; color:var(--ink);}
+
+  main{max-width:960px; margin:0 auto; padding:0 24px;}
+  section{padding:44px 0; border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+
+  .section-tag{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--accent-2);
+    letter-spacing:.06em;
+    margin:0 0 6px;
+  }
+  h2{
+    font-family:var(--serif);
+    font-size:28px;
+    margin:0 0 20px;
+    font-weight:600; color:var(--accent);
+  }
+  p{font-size:15.5px; color:#263445;}
+  ul, ol{font-size:15.5px; color:#333; padding-left:22px;}
+  li{margin-bottom:6px;}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    background:var(--panel);
+  }
+  caption{caption-side:top; text-align:left; font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:8px;}
+  th, td{
+    border:1px solid var(--rule);
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:var(--accent);
+    color:#ffffff;
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:500;
+  }
+  tr:nth-child(even) td{background:#f5f8fc;}
+
+  .schedule td:first-child{
+    font-family:var(--mono);
+    font-weight:700;
+    color:var(--accent);
+    text-align:center;
+    width:44px;
+  }
+  .badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:2px 7px;
+    border-radius:3px;
+    background:var(--accent);
+    color:#fff;
+    letter-spacing:.04em;
+  }
+  .badge.warn{background:var(--accent-2);}
+
+  .callout{
+    border-left:3px solid var(--accent-2);
+    background:#f1f6fc;
+    padding:14px 18px;
+    font-size:14.5px;
+    margin:20px 0;
+  }
+  .callout b{color:var(--accent);}
+
+  footer{
+    max-width:960px;
+    margin:0 auto;
+    padding:32px 24px 0;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+  }
+
+
+  a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+  a:hover{
+    color:var(--accent-2);
+    text-decoration:underline;
+  }
+
+  @media (max-width:640px){
+    h1{font-size:32px;}
+    header.hero{padding:40px 18px 28px;}
+    section{padding:32px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-strip">
+  <span>plano-de-ensino.md → compilado</span>
+  <span class="ok">[ ✓ APROVADO ]</span>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">Curso Técnico em Desenvolvimento de Sistemas</div>
+  <h1>Teste de Sistemas</h1>
+  <p class="subtitle">Professor: Éder Campos</p>
+  <p class="subtitle">Plano de Ensino — 40 horas, 26 aulas de 1h30</p>
+
+  <div class="meta-grid">
+    <div class="meta-cell"><span class="k">Carga horária</span><span class="v">40 horas</span></div>
+    <div class="meta-cell"><span class="k">Aulas</span><span class="v">26 × 1h30</span></div>
+    <div class="meta-cell"><span class="k">IDE</span><span class="v">IntelliJ IDEA</span></div>
+    <div class="meta-cell"><span class="k">Framework de Teste</span><span class="v">JUnit 5 + Mockito</span></div>
+    <div class="meta-cell"><span class="k">Framework de Aplicação</span><span class="v">Spring / Spring Boot</span></div>
+    <div class="meta-cell"><span class="k">Pré-requisito crítico</span><span class="v">POO (reforço)</span></div>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <div class="section-tag">01 / Ementa</div>
+    <h2>Do que trata esta UC</h2>
+    <p>Fundamentos de teste de software; tipos e níveis de teste; ambiente de desenvolvimento e ferramentas de teste (IntelliJ IDEA, Maven, JUnit 5); revisão de POO aplicada a testes; escrita de testes unitários; asserções e ciclo de vida de testes; testes parametrizados e testes de exceção; test doubles (mocks, stubs, fakes) com Mockito; cobertura de código; desenvolvimento orientado a testes (TDD); testes em aplicações Spring/Spring Boot (camadas de serviço, repositório e controller); boas práticas de teste; projeto integrador prático.</p>
+  </section>
+
+  <section>
+    <div class="section-tag">02 / Objetivos</div>
+    <h2>Objetivo geral</h2>
+    <p>Capacitar o(a) estudante a compreender a importância dos testes de software no ciclo de desenvolvimento, aplicando conceitos de Programação Orientada a Objetos na construção de testes unitários e de integração com JUnit 5, utilizando a IDE IntelliJ, e a testar aplicações construídas com o framework Spring.</p>
+
+    <h2 style="margin-top:32px;">Objetivos específicos</h2>
+    <ul>
+      <li>Compreender os fundamentos, tipos e níveis de teste de software;</li>
+      <li>Configurar um projeto Maven no IntelliJ IDEA, entendendo o papel do arquivo <code>pom.xml</code> e das dependências de teste;</li>
+      <li>Revisar e aplicar corretamente conceitos de POO (classes, atributos, métodos, encapsulamento, construtores) na criação de classes de entidade;</li>
+      <li>Criar e organizar testes unitários com JUnit 5, utilizando anotações e asserções corretamente;</li>
+      <li>Escrever testes parametrizados e testes de exceção;</li>
+      <li>Utilizar test doubles (mocks/stubs) com o Mockito;</li>
+      <li>Interpretar relatórios de cobertura de código;</li>
+      <li>Aplicar o ciclo de TDD (Red-Green-Refactor) em pequenos problemas;</li>
+      <li>Testar camadas de uma aplicação Spring Boot (Service, Repository e Controller);</li>
+      <li>Desenvolver, de forma autônoma, um pequeno projeto aplicando os testes aprendidos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-tag">03 / Abordagem</div>
+    <h2>Metodologia</h2>
+    <ul>
+      <li>Aulas expositivo-dialogadas com apoio de slides e exemplos ao vivo;</li>
+      <li>Demonstrações práticas com <b>código comentado</b>, sempre seguidas de prática guiada;</li>
+      <li>Criação conjunta de <b>classes de entidade</b> (POO) e das respectivas <b>classes de teste</b>, reforçando a relação entre modelagem de objetos e verificação de comportamento;</li>
+      <li>Exercícios individuais/em dupla com apresentação de gabarito comentado;</li>
+      <li>Retomada constante de conceitos de POO ao longo das aulas;</li>
+      <li>Projeto integrador nas aulas finais, consolidando os conteúdos da UC.</li>
+    </ul>
+    <div class="callout">
+      <b>Atenção pedagógica:</b> esta turma ainda apresenta dificuldades em POO. Cada aula que introduzir um conceito de teste dependente de POO (herança, polimorfismo, encapsulamento) deve abrir com uma retomada rápida do conceito antes de avançar.
+    </div>
+  </section>
+
+  <section>
+    <div class="section-tag">04 / Avaliação</div>
+    <h2>Instrumentos avaliativos</h2>
+    <table>
+      <thead><tr><th>Instrumento</th><th>Peso</th><th>Descrição</th></tr></thead>
+      <tbody>
+        <tr><td>Exercícios práticos por aula</td><td>40%</td><td>Atividades de fixação entregues ao final de cada aula</td></tr>
+        <tr><td>Avaliação intermediária (Aula 13)</td><td>20%</td><td>Testes funcionais, automatizados e análise de resultados</td></tr>
+        <tr><td>Projeto integrador (Aulas 24–26)</td><td>40%</td><td>Plano de testes, evidências, relatório e apresentação do projeto do grupo</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;">Critério de aprovação: nota final ≥ 6,0 (escala 0–10) e frequência mínima de 75%.</p>
+  </section>
+
+  <section>
+    <div class="section-tag">05 / Cronograma</div>
+    <h2>Conteúdo programático — aula a aula</h2>
+    <table class="schedule">
+      <caption>26 aulas × 1h30 = 39h presenciais</caption>
+      <thead>
+        <tr><th>#</th><th>Tema</th><th>Conteúdo</th><th>Observação</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><a href="Aula 01/a01_exposicao.html" target="_blank" rel="noopener noreferrer">Fundamentos de Teste de Software</a></td><td>Conceito, objetivos, importância da qualidade e papel dos testes no ciclo de desenvolvimento.</td><td><span class="badge warn">Diagnóstico</span></td></tr>
+        <tr><td>2</td><td><a href="Aula 01/a01_exposicao.html" target="_blank" rel="noopener noreferrer">Tipos e Níveis de Teste</a></td><td>Testes unitários, integração, sistema e aceitação; testes funcionais e não funcionais.</td><td>Aplicação do grupo</td></tr>
+        <tr><td>3</td><td><a href="Aula 02/a02_exposicao.html" target="_blank" rel="noopener noreferrer">Qualidade e Critérios de Aceitação</a></td><td>Qualidade de software, requisitos, critérios de aceitação e identificação de riscos.</td><td>Requisitos do projeto</td></tr>
+        <tr><td>4</td><td><a href="Aula 02/a02_exposicao.html" target="_blank" rel="noopener noreferrer">Planejamento de Testes</a></td><td>Escopo, objetivos, responsáveis, recursos, prioridades e estratégia de testes.</td><td>Plano inicial</td></tr>
+        <tr><td>5</td><td><a href="Aula 03/a03_exposicao.html" target="_blank" rel="noopener noreferrer">Análise Documental</a></td><td>Leitura de requisitos, histórias, protótipos e documentação para localizar inconsistências.</td><td>Checklist documental</td></tr>
+        <tr><td>6</td><td><a href="Aula 03/a03_exposicao.html" target="_blank" rel="noopener noreferrer">Casos de Teste</a></td><td>Estrutura de um caso de teste: pré-condições, passos, dados, resultado esperado e evidência.</td><td>Primeiros casos</td></tr>
+        <tr><td>7</td><td><a href="Aula 04/a04_exposicao.html" target="_blank" rel="noopener noreferrer">Técnicas de Elaboração de Testes</a></td><td>Partições de equivalência, valores-limite, cenários positivos e negativos.</td><td>Casos ampliados</td></tr>
+        <tr><td>8</td><td><a href="Aula 05/a05_exposicao.html" target="_blank" rel="noopener noreferrer">Ambiente e Preparação</a></td><td>Configuração do ambiente, dados de teste, ferramentas, versões e condições de execução.</td><td><span class="badge">Ambiente definido</span></td></tr>
+        <tr><td>9</td><td><a href="Aula 06/a06_exposicao.html" target="_blank" rel="noopener noreferrer">Execução e Registro de Testes</a></td><td>Execução dos casos, coleta de evidências, status e registro dos resultados.</td><td>Primeira execução</td></tr>
+        <tr><td>10</td><td><a href="Aula 07/a07_exposicao.html" target="_blank" rel="noopener noreferrer">Fundamentos de Teste de Performance</a></td><td>Desempenho, tempo de resposta, vazão, estabilidade e experiência do usuário.</td><td>Aplicação do grupo</td></tr>
+        <tr><td>11</td><td><a href="Aula 07/a07_exposicao.html" target="_blank" rel="noopener noreferrer">Tipos de Teste de Performance</a></td><td>Teste de carga, estresse, volume, resistência e escalabilidade.</td><td>Tipo selecionado</td></tr>
+        <tr><td>12</td><td><a href="Aula 08/a08_exposicao.html" target="_blank" rel="noopener noreferrer">Planejamento de Cenários</a></td><td>Usuários virtuais, operações críticas, massa de dados, duração e critérios de sucesso.</td><td>Cenário planejado</td></tr>
+        <tr><td>13</td><td><a href="Aula 08/a08_exposicao.html" target="_blank" rel="noopener noreferrer">Ferramentas de Performance</a></td><td>Apresentação e configuração de ferramenta de teste de carga e monitoramento.</td><td><span class="badge warn">Avaliação intermediária</span></td></tr>
+        <tr><td>14</td><td><a href="Aula 09/a09_exposicao.html" target="_blank" rel="noopener noreferrer">Execução de Testes de Performance</a></td><td>Preparação, execução controlada, repetição e coleta de resultados.</td><td>Execução prática</td></tr>
+        <tr><td>15</td><td><a href="Aula 09/a09_exposicao.html" target="_blank" rel="noopener noreferrer">Métricas e Análise</a></td><td>Interpretação de tempo de resposta, throughput, erros e percentis.</td><td>Planilha de métricas</td></tr>
+        <tr><td>16</td><td><a href="Aula 10/a10_exposicao.html" target="_blank" rel="noopener noreferrer">Identificação de Gargalos</a></td><td>Análise de causas prováveis em aplicação, banco de dados, rede e infraestrutura.</td><td>Hipóteses de melhoria</td></tr>
+        <tr><td>17</td><td><a href="Aula 10/a10_exposicao.html" target="_blank" rel="noopener noreferrer">Relatório de Performance</a></td><td>Organização dos resultados, gráficos, conclusões, limitações e recomendações.</td><td>Relatório parcial</td></tr>
+        <tr><td>18</td><td><a href="Aula 11/a11_exposicao.html" target="_blank" rel="noopener noreferrer">Testes Funcionais</a></td><td>Verificação das funcionalidades conforme requisitos e critérios de aceitação.</td><td>Casos funcionais</td></tr>
+        <tr><td>19</td><td><a href="Aula 12/a12_exposicao.html" target="_blank" rel="noopener noreferrer">Execução Funcional</a></td><td>Execução ponta a ponta, validação de fluxos e coleta de evidências.</td><td>Rodada funcional</td></tr>
+        <tr><td>20</td><td><a href="Aula 12/a12_exposicao.html" target="_blank" rel="noopener noreferrer">Classificação e Documentação de Falhas</a></td><td>Defeito, incidente, severidade, prioridade, reprodução e relatório de falha.</td><td>Registro de defeitos</td></tr>
+        <tr><td>21</td><td><a href="Aula 13/a13_exposicao.html" target="_blank" rel="noopener noreferrer">Reteste e Regressão</a></td><td>Validação das correções e verificação de impactos em funcionalidades existentes.</td><td>Reteste documentado</td></tr>
+        <tr><td>22</td><td><a href="Aula 13/a13_exposicao.html" target="_blank" rel="noopener noreferrer">Técnicas Complementares</a></td><td>Exploratório, baseado em risco, testes de usabilidade e testes de compatibilidade.</td><td>Cenários complementares</td></tr>
+        <tr><td>23</td><td><a href="Aula 14/a14_exposicao.html" target="_blank" rel="noopener noreferrer">Introdução à Automação</a></td><td>Benefícios, limites, critérios de seleção e organização de uma suíte automatizada.</td><td>Escopo da automação</td></tr>
+        <tr><td>24</td><td><a href="Aula 14/a14_exposicao.html" target="_blank" rel="noopener noreferrer">Primeiro Teste Automatizado</a></td><td>Estrutura de um teste, execução, asserções e organização dos resultados.</td><td>Automação inicial</td></tr>
+        <tr><td>25</td><td><a href="Aula 15/a15_exposicao.html" target="_blank" rel="noopener noreferrer">Cenários Positivos e Negativos</a></td><td>Ampliação da suíte, tratamento de entradas inválidas e integração dos testes.</td><td>Suíte consolidada</td></tr>
+        <tr><td>26</td><td><a href="Aula 15/a15_exposicao.html" target="_blank" rel="noopener noreferrer">Consolidação e Apresentação</a></td><td>Revisão do plano, análise dos resultados, plano de ação e apresentação do projeto.</td><td><span class="badge">Entrega final</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-tag">06 / Referências</div>
+    <h2>Bibliografia</h2>
+    <p><b>Básica</b></p>
+    <ul>
+      <li>JUnit 5 User Guide — junit.org/junit5/docs/current/user-guide/</li>
+      <li>Spring Framework Documentation — docs.spring.io/spring-framework/reference/</li>
+      <li>PRESSMAN, R.; MAXIM, B. <i>Engenharia de Software: uma abordagem profissional</i>. 8. ed. AMGH, 2016.</li>
+    </ul>
+    <p><b>Complementar</b></p>
+    <ul>
+      <li>BECK, K. <i>Test Driven Development: By Example</i>. Addison-Wesley, 2002.</li>
+      <li>FOWLER, M. <i>Refactoring: Improving the Design of Existing Code</i>. 2. ed. Addison-Wesley, 2018.</li>
+      <li>Documentação oficial do Mockito — site.mockito.org</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>Plano de Ensino — UC Teste de Sistemas · Técnico em Desenvolvimento de Sistemas · direitos reservados</p>
+</footer>
+
+</body>
+</html>
