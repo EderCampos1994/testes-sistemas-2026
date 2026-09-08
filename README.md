@@ -5,9 +5,9 @@
 
 
 ---
-link para página: 
+link para página: [Acessar o site da disciplina](https://edercampos1994.github.io/testes-sistemas-2026/)
 
-<p>https://edercampos1994.github.io/testes-sistemas-2026/</p>
+
 
 ---
 
@@ -19,7 +19,7 @@ link para página:
 | **Curso** | Técnico em Desenvolvimento de Sistemas |
 | **Carga horária total** | 40 horas |
 | **Número de aulas** | 26 aulas |
-| **Duração de cada aula** | 1h30 horas |
+| **Duração de cada aula** | 1h30 |
 | **Ferramentas/Tecnologias** | IntelliJ IDEA, Java, Maven, JUnit 5, Mockito, Spring Boot |
 | **Pré-requisitos** | Lógica de Programação, Programação Orientada a Objetos (POO) |
 
@@ -85,21 +85,32 @@ Critério de aprovação: nota final ≥ 6,0 (escala 0–10) e frequência míni
 
 | Aula | Carga h. | Tema | Conteúdo | Observações |
 |---|---|---|---|---|
-| 1 | 4h | Fundamentos de Teste de Software + Revisão de POO | O que é testar software, por que testar, tipos de teste (unitário, integração, sistema, aceitação), pirâmide de testes. Revisão de POO: classes, atributos, métodos, encapsulamento, construtores | Diagnóstico do nível de POO da turma |
-| 2 | 4h | Ambiente de Desenvolvimento | Instalação/configuração do IntelliJ IDEA, criação de projeto Maven, estrutura de pastas, **arquivo `pom.xml`**: o que é e para que serve, dependência do JUnit 5 explicada linha a linha | Entrega do `pom.xml` comentado |
-| 3 | 4h | Primeiros Testes com JUnit 5 | Anotações `@Test`, `@BeforeEach`, `@AfterEach`, `@BeforeAll`, `@AfterAll`; ciclo de vida de um teste; primeira classe de entidade + primeira classe de teste | Código 100% comentado |
-| 4 | 4h | Asserções | `assertEquals`, `assertTrue/False`, `assertNull/NotNull`, `assertAll`, `assertThrows`; padrão AAA (Arrange-Act-Assert); boas práticas de nomenclatura de testes | Nova entidade + testes |
-| 5 | 4h | Testes Parametrizados | `@ParameterizedTest`, `@ValueSource`, `@CsvSource`, `@MethodSource`; testes de exceção e timeout | |
-| 6 | 4h | Organização e Suítes de Teste | `@DisplayName`, `@Nested`, `@Tag`, organização de pacotes de teste; revisão de herança e polimorfismo aplicada às entidades testadas | Reforço de POO |
-| 7 | 4h | Test Doubles | Conceitos de dublês de teste: dummy, stub, fake, spy, mock; quando e por que usar | |
-| 8 | 4h | Mockito I + Avaliação Intermediária | Introdução ao Mockito, `@Mock`, `when/thenReturn`, `verify`; aplicação prática | **Avaliação intermediária** |
-| 9 | 4h | Mockito II | Mocks avançados, `ArgumentCaptor`, `@InjectMocks`, integração com JUnit 5 | |
-| 10 | 4h | Cobertura de Código | Ferramenta de cobertura (JaCoCo), leitura de relatórios, metas de cobertura, limites e armadilhas de "100% de cobertura" | |
-| 11 | 4h | TDD (Test Driven Development) | Ciclo Red-Green-Refactor; prática de TDD construindo uma pequena funcionalidade do zero | |
-| 12 | 4h | Introdução ao Spring + Testes de Serviço | Visão geral do Spring/Spring Boot e injeção de dependência (ligação com POO); `@SpringBootTest`; testes de camada de Service | |
-| 13 | 4h | Testes de Repositório (Spring Data) | `@DataJpaTest`, banco H2 em memória, testes de persistência | **Início do projeto integrador** |
-| 14 | 4h | Testes de Controller (API REST) | `MockMvc`, testes de endpoints REST, status codes, corpo de resposta | Continuação do projeto integrador |
-| 15 | 4h | Projeto Integrador — Entrega e Fechamento | Finalização e apresentação do projeto (aplicação Spring com testes unitários, de repositório e de controller); revisão geral da UC | **Entrega final** |
+| 1 | 1h30 | Fundamentos de Teste de Software | O que é testar software, por que testar, qualidade, erros, defeitos e falhas | Diagnóstico da turma |
+| 2 | 1h30 | Tipos e Níveis de Teste | Testes unitários, integração, sistema e aceitação; pirâmide de testes | Aplicação ao projeto do grupo |
+| 3 | 1h30 | Qualidade e Critérios de Aceitação | Requisitos funcionais e não funcionais, critérios de aceitação e riscos | Identificação de requisitos testáveis |
+| 4 | 1h30 | Planejamento de Testes | Objetivos, escopo, estratégia, recursos, responsabilidades e prioridades | Início do plano de testes |
+| 5 | 1h30 | Análise Documental | Leitura de requisitos, histórias de usuário, regras de negócio e identificação de inconsistências | Registro de dúvidas e riscos |
+| 6 | 1h30 | Casos de Teste | Estrutura de um caso de teste, pré-condições, passos, dados e resultado esperado | Primeiros casos do projeto |
+| 7 | 1h30 | Técnicas de Elaboração de Testes | Partição de equivalência, análise de valor-limite e tabela de decisão | Ampliação dos casos de teste |
+| 8 | 1h30 | Ambiente e Preparação | Configuração do IntelliJ IDEA, Java, Maven, estrutura do projeto e dependências no `pom.xml` | Ambiente preparado |
+| 9 | 1h30 | Execução e Registro de Testes | Execução dos casos, evidências, resultados e rastreabilidade | Primeira execução documentada |
+| 10 | 1h30 | Fundamentos de Teste de Performance | Desempenho, tempo de resposta, vazão, concorrência e disponibilidade | Definição do objetivo de performance |
+| 11 | 1h30 | Tipos de Teste de Performance | Testes de carga, estresse, volume, resistência e escalabilidade | Escolha do tipo adequado |
+| 12 | 1h30 | Planejamento de Cenários de Performance | Usuários, operações, dados, duração, critérios de sucesso e ambiente | Cenário de performance do projeto |
+| 13 | 1h30 | Ferramentas e Avaliação Intermediária | Apresentação de ferramentas, preparação de execução e avaliação prática dos testes unitários | **Avaliação intermediária** |
+| 14 | 1h30 | Execução de Testes de Performance | Preparação dos dados, execução controlada e coleta de resultados | Evidências da execução |
+| 15 | 1h30 | Métricas e Análise de Resultados | Tempo de resposta, throughput, erros, percentis e interpretação de gráficos | Análise dos resultados |
+| 16 | 1h30 | Identificação de Gargalos | CPU, memória, banco de dados, rede, consultas e pontos de estrangulamento | Hipóteses de causa |
+| 17 | 1h30 | Relatório de Performance | Organização dos resultados, conclusão, limitações e recomendações | Entrega do relatório |
+| 18 | 1h30 | Testes Funcionais | Validação das funcionalidades do próprio sistema do grupo | Seleção das funcionalidades |
+| 19 | 1h30 | Execução de Testes Funcionais | Execução dos casos, comparação entre resultado esperado e obtido | Evidências funcionais |
+| 20 | 1h30 | Classificação e Documentação de Falhas | Severidade, prioridade, descrição, passos para reprodução e evidências | Registro de defeitos |
+| 21 | 1h30 | Reteste e Regressão | Diferenças entre reteste e regressão; validação de correções | Execução após correções |
+| 22 | 1h30 | Técnicas Complementares e Boas Práticas | Testes exploratórios, negativos, fronteiras, organização e manutenção da suíte | Revisão dos casos |
+| 23 | 1h30 | Introdução à Automação | Benefícios, limites, critérios de automação e estrutura de testes automatizados | Seleção dos cenários |
+| 24 | 1h30 | Primeiro Teste Automatizado | JUnit 5, `@Test`, ciclo de vida, padrão AAA e asserções | Implementação no projeto |
+| 25 | 1h30 | Testes Parametrizados e Negativos | `@ParameterizedTest`, `@ValueSource`, `@CsvSource`, `assertThrows` e validações | Ampliação da suíte automatizada |
+| 26 | 1h30 | Consolidação, Plano de Ação e Apresentação | Organização do plano, resultados, falhas, retestes, melhorias e apresentação final | **Entrega e apresentação do projeto integrador** |
 
 ---
 
